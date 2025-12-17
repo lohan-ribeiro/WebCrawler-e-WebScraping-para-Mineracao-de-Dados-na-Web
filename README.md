@@ -1,6 +1,6 @@
 # Web Crawler e Web Scraping de Notícias de Tecnologia
 
-Implementar um web crawler e técnicas de web scraping, com o objetivo de coletar, processar e estruturar dados disponíveis na web. A aplicação explora conceitos de mineração de dados, automação de processos, análise de estruturas HTML e boas práticas de desenvolvimento.
+Implementar um Rastreador de Dados (*web crawler*) e técnicas de Raspagem de Dados (*web scraping*), com o objetivo de coletar, processar e estruturar dados disponíveis na web. A aplicação explora conceitos de mineração de dados, automação de processos, análise de estruturas HTML e boas práticas de desenvolvimento.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -13,7 +13,7 @@ Implementar um web crawler e técnicas de web scraping, com o objetivo de coleta
 
 Implementação de um web crawler e técnicas de web scraping, com o objetivo de coletar dados do site [Hacker News](https://news.ycombinator.com/), extraindo título, autor, pontuação e número de comentários. 
 
-### Crawler
+### *Crawler* 
 
 Um web crawler é um programa que navega automaticamente pela web, seguindo links entre páginas. Ele serve para descobrir URLs e mapear sites, coletando páginas para serem processadas depois.
 Será usado para:
@@ -26,7 +26,7 @@ Será usado para:
 
 - Limitar para 3 páginas.
 
-### Scraping
+### *Scraping*
 
 O web scraping é o processo de extrair informações específicas de uma página web já encontrada. Será usado para:
 
