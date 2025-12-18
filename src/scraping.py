@@ -4,4 +4,4 @@ dados = {}
 
 def scraping_news(site):
     site = BeautifulSoup(site.text, "html.parser")
-    print(site.prettify())
+    return print("eu consigo coletar os dados")
