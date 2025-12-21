@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+# Função para armazenar os dados em json.
 def save_data(data, filename="news.json"):
     Path("data").mkdir(exist_ok=True)
 

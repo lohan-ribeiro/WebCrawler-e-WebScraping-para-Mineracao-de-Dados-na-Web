@@ -13,4 +13,5 @@ for i in range(1,4):
 
     site = crawler(url, headers)
     dados = scraping_news(site)
+    print(dados)
     #save_data()
