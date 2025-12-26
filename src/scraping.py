@@ -20,7 +20,7 @@ def scraping_news(site):
         link= titulo_link_tag.find("a").get("href")
 
         # Autor da notícia.
-        autor_tag= subtext.find("a", href = re.compile(r"^user\?id=")) 
+        autor_tag= subtext.find("a", href = re.compile(r"^user\?id="))
         autor = autor_tag.get_text() if autor_tag else "Não Possui Autor"
 
         # Pontuação da notícia.
@@ -28,16 +28,16 @@ def scraping_news(site):
         score = score_tag.getText() if score_tag else "Nenhuma Avaliação"
 
         # Comentarios da notícia.
-        coments_tag = subtext.find("a", href=re.compile(r"^item\?id=")) 
+        comments_tag = subtext.find("a", href=re.compile(r"^item\?id="))
 
         # Cada notícia possui duas tags correspondete ao atributo do filtro, mas uma tem o "pai"="span".
-        if coments_tag.parent.name == "span":  # Se a tag possuir o "pai"="span"
-            coments_tag = coments_tag.find_next("a", href=re.compile(r"^item\?id=")) # Buscasse a proxima tag.
+        if comments_tag.parent.name == "span":  # Se a tag possuir o "pai"="span"
+            comments_tag = comments_tag.find_next("a", href=re.compile(r"^item\?id=")) # Buscasse a proxima tag.
 
-        coments = coments_tag.text if coments_tag else "Nenhum Comentario"
+        comments = comments_tag.text if comments_tag else "Nenhum Comentario"
 
         # Formatação do comentário
-        coments = int(coments.split()[0]) if coments and coments.split()[0].isdigit() else 0
+        comments = int(comments.split()[0]) if comments and comments.split()[0].isdigit() else 0
 
         # Dados coletados da notícia.
         dados.append({
@@ -45,7 +45,7 @@ def scraping_news(site):
             "Link": link,
             "Autor": autor,
             "Pontuação(Score)": score,
-            "Número de comentários": coments
+            "Número de comentários": comments
         })
 
     return dados
